@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let curX = 0, curY = 0;
     let tgX = 0, tgY = 0;
     let animationPaused = false;
-    let animationId: number;
+    let _animationId: number;
 
     function move() {
         if (!animationPaused) {
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             interBubble.style.transform = `translate(${Math.round(curX - interBubble.offsetWidth/2)}px, ${Math.round(curY - interBubble.offsetHeight/2)}px)`;
         }
 
-        animationId = requestAnimationFrame(move);
+        _animationId = requestAnimationFrame(move);
     }
 
     window.addEventListener('mousemove', (event) => {
