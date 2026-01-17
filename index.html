@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Love Tracker</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+  </head>
+  <body>
+    <!-- Gradient Background with Gooey Effect -->
+    <div class="gradient-bg">
+      <svg xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+            <feColorMatrix in="blur" mode="matrix"
+              values="1 0 0 0 0  
+                      0 1 0 0 0  
+                      0 0 1 0 0  
+                      0 0 0 18 -8" result="goo" />
+            <feBlend in="SourceGraphic" in2="goo" />
+          </filter>
+        </defs>
+      </svg>
+
+      <div class="gradients-container">
+        <div class="g1"></div>
+        <div class="g2"></div>
+        <div class="g3"></div>
+        <div class="g4"></div>
+        <div class="g5"></div>
+        <div class="interactive"></div>
+      </div>
+
+      <!-- Gear Icon for Mobile -->
+      <div id="gear-toggle">
+        <i class="fi fi-rr-settings"></i>
+      </div>
+
+      <!-- Text Layer -->
+      <div class="text-layer">
+        <div class="text-container dongle-bold">
+          Love Tracker
+        </div>
+        <div id="countup-timer" class="countup">
+          0
+        </div>
+        <div id="subtitle" class="dongle-light">
+          Every moment counts 💕
+        </div>
+      </div>
+    </div>
+
+    <!-- Glassy Footer -->
+    <div class="glassy-footer">
+      <button id="copy-btn">
+        <i class="fi fi-rr-copy-alt"></i>
+        <span class="btn-text">Copy</span>
+      </button>
+      <button id="share-btn">
+        <i class="fi fi-rr-share"></i>
+        <span class="btn-text">Share</span>
+      </button>
+      <button id="pause-btn">
+        <i class="fi fi-rr-pause"></i>
+        <span class="btn-text">Pause</span>
+      </button>
+      <button id="theme-btn">
+        <i class="fi fi-rr-palette"></i>
+        <span class="btn-text">Theme</span>
+      </button>
+      <button id="subtitle-btn">
+        <i class="fi fi-rr-comment-dots"></i>
+        <span class="btn-text">Hide message</span>
+      </button>
+      <button id="history-btn">
+        <i class="fi fi-rr-script"></i>
+        <span class="btn-text">History</span>
+      </button>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
